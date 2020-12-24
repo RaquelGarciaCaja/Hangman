@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hanged</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Langar&family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e9c34022b4.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__title">Hangman from movies</h1>
+    </header>
+    <main class="main">
+      <p class="main__title">Insert a letter and guess the movie</p>
+      <form action="" class="main__form">
+        <input type="text" class="main__input js-input" maxlength="1" />
+        <input type="button" value="Buscar" class="main__button js-button" />
+      </form>
+      <p class="main__output js-output"></p>
+      <div class="main__hangman">
+        <img class="hangman__img0" src="./images/hangman0.png" alt="" />
+        <img class="hangman__img1 hidden" src="./images/hangman1.png" alt="" />
+        <img class="hangman__img2 hidden" src="./images/hangman2.png" alt="" />
+        <img class="hangman__img3 hidden" src="./images/hangman3.png" alt="" />
+        <img class="hangman__img4 hidden" src="./images/hangman4.png" alt="" />
+        <img class="hangman__img5 hidden" src="./images/hangman5.png" alt="" />
+        <img class="hangman__img6 hidden" src="./images/hangman6.png" alt="" />
+      </div>
+      <section class="main__resultWin js-win">
+        <div class="main__container">
+          <i class="fas fa-times main__close js-close"></i>
+          <h1 class="main__win">You win!</h1>
+          <img
+            class="main__winGif"
+            src="https://media.giphy.com/media/o75ajIFH0QnQC3nCeD/giphy.gif"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="main__resultLose js-close">
+        <div class="main__container">
+          <i class="fas fa-times main__close js-close"></i>
+          <h1 class="main__lose">try again!</h1>
+          <img
+            class="main__loseGif"
+            src="https://media.giphy.com/media/3o6wrvdHFbwBrUFenu/giphy.gif"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

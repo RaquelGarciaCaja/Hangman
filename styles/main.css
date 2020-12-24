@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.header__title {
+  font-family: "Source Code Pro", monospace;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__title {
+  font-family: "Source Code Pro", monospace;
+  font-size: 20px;
+  text-align: center;
+  margin: 21px;
+}
+
+.main__form {
+  display: flex;
+  justify-content: center;
+}
+
+.main__input {
+  margin: 10px;
+  font-family: "Source Code Pro", monospace;
+  height: 25px;
+}
+.main__button {
+  cursor: pointer;
+  margin: 10px;
+  font-family: "Source Code Pro", monospace;
+  height: 25px;
+}
+
+.main__output {
+  text-align: center;
+  margin: 10px;
+}
+
+.main__hangman {
+  text-align: center;
+}
+
+.hangman__img0,
+.hangman__img1,
+.hangman__img2,
+.hangman__img3,
+.hangman__img4,
+.hangman__img5,
+.hangman__img6 {
+  height: 200px;
+  width: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.main__resultWin,
+.main__resultLose {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 50px;
+}
+
+.main__container {
+  position: relative;
+}
+.main__winGif {
+  height: 250px;
+  width: 250px;
+}
+
+.main__win {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  z-index: 999;
+}
+
+.main__close {
+  color: white;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  cursor: pointer;
+}
