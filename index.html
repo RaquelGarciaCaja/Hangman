@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Hanged</title>
+    <title>Hangman</title>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
@@ -22,13 +22,15 @@
 
   <body>
     <header class="header">
-      <h1 class="header__title">Hangman from movies</h1>
+      <h1 class="header__title">Movie Hangman</h1>
     </header>
     <main class="main">
       <p class="main__title">Insert a letter and guess the movie</p>
       <form action="" class="main__form">
         <input type="text" class="main__input js-input" maxlength="1" />
         <input type="button" value="Buscar" class="main__button js-button" />
+
+        <input type="button" value="Empezar de nuevo" class="main__button js-buttonReset" />
       </form>
       <p class="main__output js-output"></p>
       <div class="main__hangman">
@@ -93,6 +95,26 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <a href="mailto:raquelgc8@gmail.com" class="footer__social" target="_blank" title="Email">
+        <i class="footer__icon fas fa-envelope"></i
+      ></a>
+
+      <a
+        href="https://www.linkedin.com/in/raquelgarciacaja/"
+        class="js-icon-linkedin footer__social"
+        target="_blank"
+        title="Linkedin"
+        ><i class="footer__icon fab fa-linkedin-in"></i
+      ></a>
+      <a
+        href="https://github.com/RaquelGarciaCaja"
+        class="js-icon-github footer__social"
+        target="_blank"
+        title="Github"
+        ><i class="footer__icon fab fa-github"></i
+      ></a>
+    </footer>
 
     <script src="/js/main.js"></script>
   </body>

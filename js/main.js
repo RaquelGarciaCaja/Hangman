@@ -7,7 +7,10 @@ String.prototype.replaceAt = function (index, character) {
 
 const btn = document.querySelector(".js-button");
 const closeBtn = document.querySelector(".js-close");
+const btnReset = document.querySelector(".js-buttonReset");
 const words = ["hulk"];
+// const words = ["hulk", "ironman", "aladin", "blancanieves", "seven", "thor", "gladiator", "origen", "Interstellar", ""];
+
 const word = words[Math.floor(Math.random() * words.length)];
 let hasFailed = true;
 let countHasFailed = 0;
@@ -102,6 +105,10 @@ function pressBtn() {
 function close() {
   resultWin.style.display = "none";
 }
+function reset() {
+  location.reload();
+}
 
 btn.addEventListener("click", pressBtn);
 closeBtn.addEventListener("click", close);
+btnReset.addEventListener("click", reset);
