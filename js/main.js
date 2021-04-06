@@ -1,5 +1,4 @@
-//duda! se pueden hacer dos funciones,
-//una para rellenar los guiones y otra para pintar el hangman?
+"use strict";
 
 String.prototype.replaceAt = function (index, character) {
   return this.substr(0, index) + character + this.substr(index + character.length);
@@ -8,6 +7,7 @@ String.prototype.replaceAt = function (index, character) {
 const btn = document.querySelector(".js-button");
 const closeBtn = document.querySelector(".js-close");
 const btnReset = document.querySelector(".js-buttonReset");
+const counter = document.querySelector(".js-counter");
 const words = ["hulk"];
 // const words = ["hulk", "ironman", "aladin", "blancanieves", "seven", "thor", "gladiator", "origen", "Interstellar", ""];
 
@@ -28,9 +28,14 @@ const resultLose = document.querySelector(".js-lose");
 let wordScript = word.replace(/./g, "_ ");
 document.querySelector(".js-output").innerHTML = wordScript;
 
-function pressBtn() {
-  // return user.name.toLowerCase().includes(filterName.toLowerCase());
+function initGame() {
+  hasFailed = true;
+  searchLeter();
+  notFindLeter();
+}
 
+function searchLeter() {
+  // return user.name.toLowerCase().includes(filterName.toLowerCase());
   const leter = document.querySelector(".js-input").value;
   for (const i in word) {
     if (leter === word[i]) {
@@ -38,8 +43,15 @@ function pressBtn() {
       hasFailed = false;
     }
   }
+  document.querySelector(".js-input").value = "";
+  document.querySelector(".js-input").focus();
+  document.querySelector(".js-output").innerHTML = wordScript;
+}
+
+function notFindLeter() {
   if (hasFailed) {
     countHasFailed++;
+    counter.innerHTML = `<p>${countHasFailed}</p>`;
     if (countHasFailed == 1) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.remove("hidden");
@@ -91,15 +103,10 @@ function pressBtn() {
     }
   } else {
     if (wordScript.indexOf("_") < 0) {
+      console.log("object");
       resultWin.style.display = "flex";
     }
-    // } else if (wordScript.indexOf("_") < 0) {
-    //   resultLose.style.display = "flex";
-    // }
   }
-  document.querySelector(".js-input").value = "";
-  document.querySelector(".js-input").focus();
-  document.querySelector(".js-output").innerHTML = wordScript;
 }
 
 function close() {
@@ -109,6 +116,6 @@ function reset() {
   location.reload();
 }
 
-btn.addEventListener("click", pressBtn);
+btn.addEventListener("click", initGame);
 closeBtn.addEventListener("click", close);
 btnReset.addEventListener("click", reset);
