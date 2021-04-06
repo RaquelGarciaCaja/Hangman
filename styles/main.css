@@ -40,6 +40,10 @@
   font-family: "Source Code Pro", monospace;
   height: 25px;
 }
+.main__counterText {
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+}
 .main__button {
   cursor: pointer;
   margin: 10px;
@@ -141,4 +145,8 @@
 }
 .footer__icon:hover {
   background-color: lightgreen;
+}
+
+.color {
+  color: lightgreen;
 }

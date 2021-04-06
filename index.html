@@ -28,12 +28,13 @@
       <p class="main__title">Guess the movie</p>
       <form action="" class="main__form">
         <input type="text" class="main__input js-input" maxlength="1" />
-        <input type="button" value="Buscar" class="main__button js-button" />
+        <input type="button" value="Go" class="main__button js-button" />
 
-        <input type="button" value="Empezar de nuevo" class="main__button js-buttonReset" />
+        <input type="button" value="Start again" class="main__button js-buttonReset" />
       </form>
       <p class="main__output js-output"></p>
-      <p class="main__counter js-counter"></p>
+      <section class="main__counter js-counter"></section>
+      <section class="js-lose"></section>
 
       <div class="main__hangman">
         <img class="hangman__img0" src="./images/hangman0.png" alt="hangman" title="hangman" />
@@ -84,18 +85,6 @@
             alt=""
           />
         </div>
-      </section>
-
-      <section class="main__resultLose js-lose">
-        <!-- <div class="main__container">
-          <i class="fas fa-times main__close js-close"></i>
-          <h1 class="main__lose">try again!</h1>
-          <img
-            class="main__loseGif"
-            src="https://media.giphy.com/media/3o6wrvdHFbwBrUFenu/giphy.gif"
-            alt=""
-          />
-        </div> -->
       </section>
     </main>
     <footer class="footer">

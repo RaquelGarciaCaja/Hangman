@@ -4,10 +4,6 @@ String.prototype.replaceAt = function (index, character) {
   return this.substr(0, index) + character + this.substr(index + character.length);
 };
 
-const btn = document.querySelector(".js-button");
-const closeBtn = document.querySelector(".js-close");
-const btnReset = document.querySelector(".js-buttonReset");
-const counter = document.querySelector(".js-counter");
 const words = [
   "hulk",
   "ironman",
@@ -29,7 +25,10 @@ const words = [
   "pocahontas",
   "titanic",
 ];
-
+const btn = document.querySelector(".js-button");
+const closeBtn = document.querySelector(".js-close");
+const btnReset = document.querySelector(".js-buttonReset");
+const counter = document.querySelector(".js-counter");
 const word = words[Math.floor(Math.random() * words.length)];
 let hasFailed = true;
 let countHasFailed = 0;
@@ -78,7 +77,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
-      counter.innerHTML = `<p>Ha sido un pequeño fallo</p>`;
+      counter.innerHTML = `<p class="main__counterText">It was a small failure</p>`;
     } else if (countHasFailed == 2) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -87,7 +86,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
-      counter.innerHTML = `<p>Ha sido un pequeño fallo</p>`;
+      counter.innerHTML = `<p class="main__counterText">It was a small failure</p>`;
     } else if (countHasFailed == 3) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -96,7 +95,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
-      counter.innerHTML = `<p>A la próxima aciertas</p>`;
+      counter.innerHTML = `<p class="main__counterText">Next time you get the letter</p>`;
     } else if (countHasFailed == 4) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -105,7 +104,7 @@ function notFindLeter() {
       hangmanImg4.classList.remove("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
-      counter.innerHTML = `<p>A la próxima aciertas</p>`;
+      counter.innerHTML = `<p class="main__counterText">Next time you get the letter</p>`;
     } else if (countHasFailed == 5) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -114,7 +113,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.remove("hidden");
       hangmanImg6.classList.add("hidden");
-      counter.innerHTML = `<p>Cuidado, te queda solo una oportunidad</p>`;
+      counter.innerHTML = `<p class="main__counterText">Be careful, you only have one chance</p>`;
     } else if (countHasFailed == 6) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -123,7 +122,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.remove("hidden");
-      resultLose.style.display = "flex";
+      resultLose.innerHTML = `<p class="main__counterText">The movie we were looking for was <span class="color main__counterText"> ${word}</span></p>`;
     }
   } else {
     if (wordScript.indexOf("_") < 0) {
