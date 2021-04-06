@@ -78,6 +78,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
+      counter.innerHTML = `<p>Ha sido un pequeño fallo</p>`;
     } else if (countHasFailed == 2) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -86,6 +87,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
+      counter.innerHTML = `<p>Ha sido un pequeño fallo</p>`;
     } else if (countHasFailed == 3) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -94,6 +96,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
+      counter.innerHTML = `<p>A la próxima aciertas</p>`;
     } else if (countHasFailed == 4) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -102,6 +105,7 @@ function notFindLeter() {
       hangmanImg4.classList.remove("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.add("hidden");
+      counter.innerHTML = `<p>A la próxima aciertas</p>`;
     } else if (countHasFailed == 5) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
@@ -110,6 +114,7 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.remove("hidden");
       hangmanImg6.classList.add("hidden");
+      counter.innerHTML = `<p>Cuidado, te queda solo una oportunidad</p>`;
     } else if (countHasFailed == 6) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.add("hidden");
