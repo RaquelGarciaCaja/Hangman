@@ -104,8 +104,7 @@
   width: 250px;
 }
 
-.main__win,
-.main__lose {
+.main__win {
   font-size: 50px;
   text-transform: uppercase;
   font-family: "Source Code Pro", monospace;
@@ -113,6 +112,12 @@
   z-index: 999;
 }
 
+.main__lose {
+  display: flex;
+  align-self: center;
+  padding: 5px;
+  margin-top: 10px;
+}
 .main__close {
   color: white;
   position: absolute;
