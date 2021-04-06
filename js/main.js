@@ -8,8 +8,27 @@ const btn = document.querySelector(".js-button");
 const closeBtn = document.querySelector(".js-close");
 const btnReset = document.querySelector(".js-buttonReset");
 const counter = document.querySelector(".js-counter");
-const words = ["hulk"];
-// const words = ["hulk", "ironman", "aladin", "blancanieves", "seven", "thor", "gladiator", "origen", "Interstellar", ""];
+const words = [
+  "hulk",
+  "ironman",
+  "aladin",
+  "blancanieves",
+  "seven",
+  "thor",
+  "gladiator",
+  "origen",
+  "interstellar",
+  "zodiac",
+  "spiderman",
+  "antman",
+  "zootropolis",
+  "mulan",
+  "hercules",
+  "dumbo",
+  "frozen",
+  "pocahontas",
+  "titanic",
+];
 
 const word = words[Math.floor(Math.random() * words.length)];
 let hasFailed = true;
@@ -51,7 +70,6 @@ function searchLeter() {
 function notFindLeter() {
   if (hasFailed) {
     countHasFailed++;
-    counter.innerHTML = `<p>${countHasFailed}</p>`;
     if (countHasFailed == 1) {
       hangmanImg0.classList.add("hidden");
       hangmanImg1.classList.remove("hidden");
@@ -100,10 +118,10 @@ function notFindLeter() {
       hangmanImg4.classList.add("hidden");
       hangmanImg5.classList.add("hidden");
       hangmanImg6.classList.remove("hidden");
+      resultLose.style.display = "flex";
     }
   } else {
     if (wordScript.indexOf("_") < 0) {
-      console.log("object");
       resultWin.style.display = "flex";
     }
   }
