@@ -14,8 +14,10 @@
   font-family: "Source Code Pro", monospace;
   text-transform: uppercase;
   font-size: 50px;
+  color: lightgreen;
 }
 
+/* main */
 .main {
   display: flex;
   flex-direction: column;
@@ -44,6 +46,9 @@
   font-family: "Source Code Pro", monospace;
   height: 25px;
   padding: 0 3px;
+}
+.main__button:hover {
+  background-color: lightgreen;
 }
 
 .main__output {
