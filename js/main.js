@@ -53,10 +53,9 @@ function initGame() {
   searchLeter();
   notFindLeter();
 }
-
 function searchLeter() {
-  // return user.name.toLowerCase().includes(filterName.toLowerCase());
-  const leter = document.querySelector(".js-input").value;
+  const leters = document.querySelector(".js-input").value;
+  const leter = leters.toLowerCase();
   for (const i in word) {
     if (leter === word[i]) {
       wordScript = wordScript.replaceAt(i * 2, leter);
