@@ -9,12 +9,12 @@ const words = [
   "ironman",
   "aladin",
   "blancanieves",
-  "seven",
+  "brave",
   "thor",
-  "gladiator",
-  "origen",
-  "interstellar",
-  "zodiac",
+  "enredados",
+  "moana",
+  "up",
+  "coco",
   "spiderman",
   "antman",
   "zootropolis",
@@ -23,7 +23,9 @@ const words = [
   "dumbo",
   "frozen",
   "pocahontas",
-  "titanic",
+  "avengers",
+  "cenicienta",
+  "pinocho",
 ];
 const btn = document.querySelector(".js-button");
 const closeBtn = document.querySelector(".js-close");
